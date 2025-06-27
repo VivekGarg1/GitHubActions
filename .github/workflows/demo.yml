@@ -18,6 +18,3 @@ jobs:
 
       - name: 'Perform Operation with ID ${{ env.GITHUB_RUN_NUMBER_WITH_OFFSET }}'
         run: echo "Success!"
-
-      - name: 'Perform Operation with ID ${{ env.GITHUB_RUN_NUMBER_WITH_OFFSET }}'
-        run: echo "Success!"

@@ -14,7 +14,10 @@ jobs:
         env:
           NUM: 10
         run: |
-          echo "GITHUB_RUN_NUMBER_WITH_OFFSET=$(($NUM + 200))"
+          echo "GITHUB_RUN_NUMBER_WITH_OFFSET=$(($NUM + 200))" >> $GITHUB_ENV
+
+      - name: 'Perform Operation with ID ${{ env.GITHUB_RUN_NUMBER_WITH_OFFSET }}'
+        run: echo "Success!"
 
       - name: 'Perform Operation with ID ${{ env.GITHUB_RUN_NUMBER_WITH_OFFSET }}'
         run: echo "Success!"
